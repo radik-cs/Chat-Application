@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block styles %}
+
+{% endblock %}
+
+{% block content %}
+
+<p>Your profile! - Chat App Logged in as {{username}} <a href="{{ url_for('unlogger')}}">Click here to logout</a></p>
+
+<h1>User: <span id="username">{{username}}</span></h1>
+
+
+<form id="new_msg_form" action="#" method="POST">
+    <div>
+        <label for="message">Type your message here:</label>
+    </div>
+    <div>
+        <textarea id="message" name="message"></textarea>
+        <br>
+        <button type="submit">Send</button>
+    </div>
+</form>
+
+
+
+<div class="messages" style="margin-top: 10px;">
+    <textarea id="messages" name="messages" rows="10" cols="50">
+
+
+
+
+
+    </textarea>
+</div>
+
+
+
+{% endblock %}
